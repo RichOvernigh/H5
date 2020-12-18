@@ -1,5 +1,3 @@
-
-
 const webpackConfig = require('./config/webpack.config.js')
 const CompressionWebpackPlugin = require('compression-webpack-plugin')
 const isProd = process.env.NODE_ENV === 'production'
@@ -8,8 +6,13 @@ const isProd = process.env.NODE_ENV === 'production'
 const DEV_URL = 'http://127.0.0.1'
 
 // mock模式代理地址,为了方便演示，这里使用了fastmock线上服务，建议使用yapi,可以搭建私服， TODO: 按需修改
+/**
+ * mock 地址 www.fastmock.site
+ * 用户名 m5768507
+ * 密码 m1071023224
+ */
 const MOCK_URL =
-  'https://www.fastmock.site/mock/52683c53c56c5c59bc1e46d24a3550b6/zijun'
+  'https://www.fastmock.site/mock/80efdd786168949327d17e0799a56b99/h5demo'
 
 module.exports = {
   configureWebpack: config => {
@@ -27,7 +30,7 @@ module.exports = {
   chainWebpack: config => {
     // 项目标题
     config.plugin('html').tap(args => {
-      args[0].title = '前端有的玩'
+      args[0].title = 'H5通用模板'
       return args
     })
     webpackConfig(config)
