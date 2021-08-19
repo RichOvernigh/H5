@@ -2,6 +2,7 @@
 git pull
 
 # 安装依赖和打包
+yarn install
 yarn --registry=https://registry.npm.taobao.org/ && yarn build
 
 # 删除容器
