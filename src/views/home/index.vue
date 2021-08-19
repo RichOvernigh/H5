@@ -19,6 +19,8 @@
       <van-password-input
         :value="value"
         :focused="showKeyboard"
+        :length="4"
+        :mask="false"
         @focus="showKeyboard = true"
       />
       <!-- 数字键盘 -->
